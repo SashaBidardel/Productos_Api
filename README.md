@@ -1,3 +1,17 @@
+# 📦 ProductoAPI - Sistema de Gestión de Inventario
+
+Esta es una API REST robusta construida con **Spring Boot 3**. El sistema permite gestionar un catálogo de productos y categorías, integrando un módulo de seguridad completo con autenticación, roles de usuario y un manejador global de excepciones.
+
+---
+
+## 🏗️ Arquitectura y Diseño
+
+El proyecto sigue una arquitectura de **Nueve Capas** (Separación de responsabilidades):
+
+* **Entidades (Model):** Uso de JPA para mapear tablas. Incluye una relación `@ManyToOne` entre Producto y Categoría.
+* **Enums:** Implementación de `Role` (ADMIN, USER) para una gestión de permisos tipada y segura.
+* **Repositorios:** Abstracción de datos con `JpaRepository`.
+* **Servicios:** Capa de lógica de negocio donde se gestionan las reglas (ej: reasignación de productos al borrar categorías).
 * **Controladores:** Endpoints REST que devuelven respuestas en formato JSON.
 * **Manejo de Excepciones:** Uso de `@RestControllerAdvice` para capturar errores personalizados y devolver códigos HTTP coherentes (400, 404, 403).
 
