@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/auth") // Centralizamos todo lo relacionado con seguridad
+@RequestMapping("/api/auth") // Centralizamos  seguridad
 @Slf4j
 public class MainController {
 

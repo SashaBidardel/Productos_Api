@@ -35,7 +35,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.DELETE, "/api/categorias/**").hasRole("ADMIN")
 
                         // 2. Rutas públicas (Registro y Login)
-                        .requestMatchers("/api/registro", "/api/login").permitAll()
+                        .requestMatchers("/api/registro", "/api/auth/**").permitAll()
 
                         // 3. El resto requiere estar autenticado
                         .anyRequest().authenticated()
