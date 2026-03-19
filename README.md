@@ -53,13 +53,13 @@ y la predefinida por defecto en caso de no tener ninguna)
     * *JSON:* `{"nombre": "Raton", "precio": 20, "categoria": {"id": 1}}`
 * **Borrar (Solo Admin):** `DELETE http://localhost:8080/api/productos/{id}`
 
-
 ### 3. Lógica Especial de Categorías
 * **Borrar Categoría:** `DELETE http://localhost:8080/api/categorias/{id}`
     * **Regla 1:** Si intentas borrar la categoría "General" (ID 1), recibirás un `400 Bad Request`.
     * **Regla 2:** Si borras cualquier otra categoría, sus productos **no se borran**, se mueven automáticamente a "General".
 * **Crear (Solo Admin):** `POST http://localhost:8080/api/categorias`
     * *JSON:* `{"nombre": "Hogar"}`
+  
 ### 4. Logearse
 * **Logearse** `POST http://localhost:8080/api/auth/login`
     * *JSON:* `{
