@@ -50,7 +50,7 @@ public class UsuarioController {
             return ResponseEntity.notFound().build();
         }
 
-        // Actualizamos los campos necesarios
+        // Actualizamos los campos
         usuarioExistente.setUsername(usuarioDetalles.getUsername());
         usuarioExistente.setRole(usuarioDetalles.getRole());
 

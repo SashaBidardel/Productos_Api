@@ -18,17 +18,17 @@ public class GlobalExceptionHandler {
 
         log.error("Se ha producido una excepción: {}", ex.getMessage());
 
-        // 2. Creamos un JSON de respuesta dinámico
+        // Creamos un JSON de respuesta dinámico
         Map<String, String> respuesta = new HashMap<>();
         respuesta.put("error", "Error en la operación");
         respuesta.put("mensaje", ex.getMessage());
         respuesta.put("status", "400");
 
-        // 3. Retornamos un 400 Bad Request con el JSON
+        // Retornamos un 400 Bad Request con el JSON
         return new ResponseEntity<>(respuesta, HttpStatus.BAD_REQUEST);
     }
 
-    // Opcional: Manejar cualquier otro error inesperado (500)
+    //  Manejar cualquier otro error inesperado (500)
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, String>> manejarErroresGenerales(Exception ex) {
         log.error("Error no controlado: ", ex);

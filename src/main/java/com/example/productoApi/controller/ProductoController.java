@@ -73,7 +73,7 @@ public class ProductoController {
             return ResponseEntity.notFound().build();
         }
 
-        // Actualizar campos básicos
+        // Actualizar campos
         existente.setNombre(detalles.getNombre());
         existente.setPrecio(detalles.getPrecio()); // Asumiendo que tienes este campo
 

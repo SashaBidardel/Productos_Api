@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController // Cambiado para API
+@RestController
 @RequestMapping("/api/categorias") // Convención /api/...
 @Slf4j // Reemplaza la creación manual del Logger
 public class CategoriaController {
 
     private final CategoriaService categoriaService;
 
-    @Autowired // Constructor inyectado (Buena práctica)
+    @Autowired
     public CategoriaController(CategoriaService categoriaService) {
         this.categoriaService = categoriaService;
     }
@@ -65,7 +65,7 @@ public class CategoriaController {
         }
 
         existente.setNombre(detalles.getNombre());
-        // ... otros campos
+
 
         Categoria actualizada = categoriaService.guardarCategoria(existente);
         return ResponseEntity.ok(actualizada);

@@ -11,10 +11,9 @@ import java.util.Map;
 @Slf4j
 public class MainController {
 
-    // 1. El GET /login ya no hace falta en la API.
-    // El formulario de login lo tendrá tu Frontend (React/Angular/HTML).
 
-    // 2. Procesar el Login (POST)
+
+    // Procesar el Login (POST)
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> credentials) {
         String username = credentials.get("username");
@@ -22,11 +21,9 @@ public class MainController {
 
         log.info("Intento de login para el usuario: {}", username);
 
-        // Aquí iría tu lógica de validación con Spring Security
-        // Por ahora, simulamos una respuesta exitosa
+
         return ResponseEntity.ok(Map.of(
                 "mensaje", "Login exitoso",
-                "token", "aqui-iria-tu-jwt-token",
                 "username", username
         ));
     }

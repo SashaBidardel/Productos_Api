@@ -21,10 +21,8 @@ public class RegistroController {
         this.usuarioService = usuarioService;
     }
 
-    // 1. Ya no necesitamos el @GetMapping para mostrar el formulario.
-    // El formulario ahora vive en el Frontend (React, Angular, HTML simple, etc.)
 
-    // 2. Procesar el registro
+    // Procesar el registro
     @PostMapping
     public ResponseEntity<?> registrarUsuario(@RequestBody Usuario usuario) {
         try {
@@ -36,7 +34,7 @@ public class RegistroController {
 
             log.info("Nuevo usuario registrado: {}", usuarioCreado.getUsername());
 
-            // En una API, en lugar de redirigir, devolvemos un mensaje de éxito
+            // Como es un API devolvemos un mensaje de éxito
             return ResponseEntity.status(HttpStatus.CREATED)
                     .body(Map.of(
                             "mensaje", "Usuario registrado correctamente",
