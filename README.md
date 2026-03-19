@@ -29,6 +29,9 @@ Al arrancar, el sistema crea automáticamente estos usuarios:
 | `admin` | `1234` | **ADMIN** | Control total (CRUD completo) |
 | `usuario` | `1234` | **USER** | Solo lectura (GET) |
 
+También se crea la categoría "General" y unos productos de prueba (obviamente están en la categoria General que es la única 
+y la predefinida por defecto en caso de no tener ninguna)
+ 
 ---
 
 ## 🚀 Guía de Pruebas en Postman
