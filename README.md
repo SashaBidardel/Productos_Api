@@ -34,7 +34,7 @@ Al arrancar, el sistema crea automáticamente estos usuarios:
 ## 🚀 Guía de Pruebas en Postman
 
 ### 1. Registro de Usuarios (Abierto)
-* **Endpoint:** `POST /api/registro`
+* **Endpoint:** `POST http://localhost:8080/api/registro`
 * **Cuerpo (JSON):**
     ```json
     {
@@ -46,12 +46,13 @@ Al arrancar, el sistema crea automáticamente estos usuarios:
 
 ### 2. Gestión de Productos (Requiere Auth)
 * **Listar:** `GET /api/productos`
-* **Crear (Solo Admin):** `POST /api/productos`
-    * *JSON:* `{"nombre": "Raton", "precio": 20.5, "categoria": {"id": 1}}`
-* **Borrar (Solo Admin):** `DELETE /api/productos/{id}`
-
+* **Crear (Solo Admin):** `POST http://localhost:8080/api/productos`
+    * *JSON:* `{"nombre": "Raton", "precio": 20, "categoria": {"id": 1}}`
+* **Borrar (Solo Admin):** `DELETE http://localhost:8080/api/productos/{id}`
+* **Crear (Solo Admin):** `POST http://localhost:8080/api/categorias`
+    * *JSON:* `{"nombre": "Hogar"}`
 ### 3. Lógica Especial de Categorías
-* **Borrar Categoría:** `DELETE /api/categorias/{id}`
+* **Borrar Categoría:** `DELETE http://localhost:8080/api/categorias/{id}`
     * **Regla 1:** Si intentas borrar la categoría "General" (ID 1), recibirás un `400 Bad Request`.
     * **Regla 2:** Si borras cualquier otra categoría, sus productos **no se borran**, se mueven automáticamente a "General".
 
