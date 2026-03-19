@@ -54,6 +54,9 @@ y la predefinida por defecto en caso de no tener ninguna)
 * **Borrar (Solo Admin):** `DELETE http://localhost:8080/api/productos/{id}`
 * **Crear (Solo Admin):** `POST http://localhost:8080/api/categorias`
     * *JSON:* `{"nombre": "Hogar"}`
+* **Logearse** `POST http://localhost:8080/api/auth/login`
+    * *JSON:* `{
+    "username": "admin","password": "1234"}`
 ### 3. Lógica Especial de Categorías
 * **Borrar Categoría:** `DELETE http://localhost:8080/api/categorias/{id}`
     * **Regla 1:** Si intentas borrar la categoría "General" (ID 1), recibirás un `400 Bad Request`.
