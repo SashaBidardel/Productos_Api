@@ -6,7 +6,7 @@ Esta es una API REST robusta construida con **Spring Boot 3**. El sistema permit
 
 ## 🏗️ Arquitectura y Diseño
 
-El proyecto sigue una arquitectura de **Nueve Capas** (Separación de responsabilidades):
+El proyecto sigue una arquitectura de ** Capas** (Separación de responsabilidades):
 
 * **Entidades (Model):** Uso de JPA para mapear tablas. Incluye una relación `@ManyToOne` entre Producto y Categoría.
 * **Enums:** Implementación de `Role` (ADMIN, USER) para una gestión de permisos tipada y segura.
