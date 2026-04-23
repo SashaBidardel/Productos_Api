@@ -73,7 +73,7 @@ y la predefinida por defecto en caso de no tener ninguna)
     ```properties
     spring.datasource.url=jdbc:mysql://localhost:3306/producto_db
     spring.datasource.username=root
-    spring.datasource.password=tu_password
+    spring.datasource.password=password
     spring.jpa.hibernate.ddl-auto=update
     ```
 3.  **Ejecución:**
